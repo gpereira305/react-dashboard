@@ -42,7 +42,7 @@ import product4 from "./product4.jpg";
 import product5 from "./product5.jpg";
 import product6 from "./product6.jpg";
 import product7 from "./product7.jpg";
-import product8 from "./product8.jpg";
+// import product8 from "./product8.jpg";
 
 export const gridOrderImage = (props) => (
   <div>
@@ -521,18 +521,18 @@ export const links = [
   },
 
   {
-    title: "Pages",
+    title: "Páginas",
     links: [
       {
-        name: "orders",
+        name: "Pedidos",
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: "employees",
+        name: "colaboradores",
         icon: <IoMdContacts />,
       },
       {
-        name: "customers",
+        name: "Clientes",
         icon: <RiContactsLine />,
       },
     ],
@@ -541,7 +541,7 @@ export const links = [
     title: "Apps",
     links: [
       {
-        name: "calendar",
+        name: "calendário",
         icon: <AiOutlineCalendar />,
       },
       {
@@ -562,36 +562,36 @@ export const links = [
     title: "Charts",
     links: [
       {
-        name: "line",
+        name: "linha",
         icon: <AiOutlineStock />,
       },
       {
-        name: "area",
+        name: "área",
         icon: <AiOutlineAreaChart />,
       },
 
       {
-        name: "bar",
+        name: "barra",
         icon: <AiOutlineBarChart />,
       },
       {
-        name: "pie",
+        name: "pizza",
         icon: <FiPieChart />,
       },
       {
-        name: "financial",
+        name: "financeiro",
         icon: <RiStockLine />,
       },
       {
-        name: "color-mapping",
+        name: "mapa de cores",
         icon: <BsBarChart />,
       },
       {
-        name: "pyramid",
+        name: "pirâmide",
         icon: <GiLouvrePyramid />,
       },
       {
-        name: "stacked",
+        name: "empilhamento",
         icon: <AiOutlineBarChart />,
       },
     ],
