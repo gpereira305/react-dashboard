@@ -6,7 +6,13 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { links } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 export default function Sidebar() {
-  const { activeMenu, setActiveMenu } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+
+  const handleCloseSidebar = () => {
+    if (activeMenu && screenSize <= 900) {
+      setActiveMenu(false);
+    }
+  };
 
   const sharedSlyle =
     "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md m-2";
@@ -21,7 +27,7 @@ export default function Sidebar() {
             <Link
               to="/"
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-light dark:text-white text-slate-900"
-              onClick={() => setActiveMenu(false)}
+              onClick={() => handleCloseSidebar}
             >
               <SiShopware /> <span>Shoppy</span>
             </Link>
@@ -51,7 +57,7 @@ export default function Sidebar() {
                         className={({ isActive }) =>
                           isActive ? activeLink : inactivelLink
                         }
-                        onClick={() => {}}
+                        onClick={() => handleCloseSidebar}
                       >
                         {icon}
                         <span className="capitalize">{name}</span>

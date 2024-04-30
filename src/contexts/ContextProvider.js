@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 
 const StateContext = createContext();
 
-const initalState = {
+const initialState = {
   chat: false,
   cart: false,
   userProfile: false,
@@ -11,10 +11,21 @@ const initalState = {
 
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
+  const [isClicked, setIsClicked] = useState(initialState);
+  const [screenSize, setScreenSize] = useState(undefined);
+
+  const handleClick = (clicked) => {
+    setIsClicked({ ...initialState, [clicked]: true });
+  };
 
   const providedValues = {
     activeMenu,
     setActiveMenu,
+    isClicked,
+    setIsClicked,
+    handleClick,
+    screenSize,
+    setScreenSize,
   };
   return (
     <StateContext.Provider value={providedValues}>
