@@ -26,7 +26,6 @@ import "./App.css";
 
 export default function App() {
   const { activeMenu } = useStateContext();
-  const navStyle = activeMenu ? "md:ml-72" : "flex-2";
 
   return (
     <>
@@ -44,47 +43,48 @@ export default function App() {
             </TooltipComponent>
           </div>
 
-          {activeMenu ? (
-            <div className="fixed w-72 sidebar dark:bg-secondary-dark-bg bg-white">
-              <Sidebar />
-            </div>
-          ) : (
-            <div className="w-0 p-10 dark:bg-main-dark-bg">
-              <Sidebar />
-            </div>
-          )}
           <div
-            className={`${navStyle} dark:bg-main-bg bg-main-bg min-h-screen w-full`}
+            className={`${
+              activeMenu ? "translate-x-[0px]" : "translate-x-[-300px]"
+            } fixed w-72 dark:bg-secondary-dark-bg bg-white transition-all duration-500 ease-in-out z-[500000]`}
+          >
+            <Sidebar />
+          </div>
+
+          <div
+            className={`${
+              activeMenu ? "md:ml-72" : ""
+            } dark:bg-main-bg bg-main-bg min-h-screen w-full transition-all duration-500 ease-in-out`}
           >
             <nav className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </nav>
-          </div>
 
-          <div>
-            <Routes>
-              {/* dashboard */}
-              <Route path="/" element={<Ecommerce />} />
-              <Route path="/ecommerce" element={<Ecommerce />} />
-              {/* pages */}
-              <Route path="/pedidos" element={<Orders />} />
-              <Route path="/colaboradores" element={<Employees />} />
-              <Route path="/clientes" element={<Customers />} />
-              {/* apps */}
-              <Route path="/kanban" element={<Kanban />} />
-              <Route path="/editor" element={<Editor />} />
-              <Route path="/calendário" element={<Calendar />} />
-              <Route path="/color-picker" element={<ColorPicker />} />
-              {/* Charts */}
-              <Route path="/linha" element={<Line />} />
-              <Route path="/área" element={<Area />} />
-              <Route path="/barra" element={<Bar />} />
-              <Route path="/pizza" element={<Pie />} />
-              <Route path="/financeiro" element={<Financial />} />
-              <Route path="/mapa de cores" element={<ColorMapping />} />
-              <Route path="/pirâmide" element={<Pyramid />} />
-              <Route path="/empilhamento" element={<Stacked />} />
-            </Routes>
+            <div className="h-full bg-gray-200 p-5 pt-[70px]">
+              <Routes>
+                {/* dashboard */}
+                <Route path="/" element={<Ecommerce />} />
+                <Route path="/ecommerce" element={<Ecommerce />} />
+                {/* pages */}
+                <Route path="/pedidos" element={<Orders />} />
+                <Route path="/colaboradores" element={<Employees />} />
+                <Route path="/clientes" element={<Customers />} />
+                {/* apps */}
+                <Route path="/kanban" element={<Kanban />} />
+                <Route path="/editor" element={<Editor />} />
+                <Route path="/calendario" element={<Calendar />} />
+                <Route path="/color-picker" element={<ColorPicker />} />
+                {/* Charts */}
+                <Route path="/linha" element={<Line />} />
+                <Route path="/area" element={<Area />} />
+                <Route path="/barra" element={<Bar />} />
+                <Route path="/pizza" element={<Pie />} />
+                <Route path="/financeiro" element={<Financial />} />
+                <Route path="/mapa-de-cores" element={<ColorMapping />} />
+                <Route path="/piramide" element={<Pyramid />} />
+                <Route path="/empilhamento" element={<Stacked />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </BrowserRouter>

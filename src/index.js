@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { ContextProvider } from "./contexts/ContextProvider";
+import { GlobalContextProvider } from "./contexts/ContextProvider";
 
 ReactDOM.render(
-  <ContextProvider>
+  <GlobalContextProvider>
     <App />
-  </ContextProvider>,
+  </GlobalContextProvider>,
   document.getElementById("root")
 );

@@ -514,7 +514,8 @@ export const links = [
     title: "Dashboard",
     links: [
       {
-        name: "ecommerce",
+        linkName: "ecommerce",
+        name: "Ecommerce",
         icon: <FiShoppingBag />,
       },
     ],
@@ -524,14 +525,17 @@ export const links = [
     title: "Páginas",
     links: [
       {
+        linkName: "pedidos",
         name: "Pedidos",
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: "colaboradores",
+        linkName: "colaboradores",
+        name: "Colaboradores",
         icon: <IoMdContacts />,
       },
       {
+        linkName: "clientes",
         name: "Clientes",
         icon: <RiContactsLine />,
       },
@@ -541,19 +545,23 @@ export const links = [
     title: "Apps",
     links: [
       {
-        name: "calendário",
+        linkName: "calendario",
+        name: "Calendário",
         icon: <AiOutlineCalendar />,
       },
       {
-        name: "kanban",
+        linkName: "kanban",
+        name: "Kanban",
         icon: <BsKanban />,
       },
       {
-        name: "editor",
+        linkName: "editor",
+        name: "Editor",
         icon: <FiEdit />,
       },
       {
-        name: "color-picker",
+        linkName: "color-picker",
+        name: "Color-picker",
         icon: <BiColorFill />,
       },
     ],
@@ -562,36 +570,43 @@ export const links = [
     title: "Charts",
     links: [
       {
-        name: "linha",
+        linkName: "linha",
+        name: "Linha",
         icon: <AiOutlineStock />,
       },
       {
-        name: "área",
+        linkName: "area",
+        name: "Área",
         icon: <AiOutlineAreaChart />,
       },
-
       {
-        name: "barra",
+        linkName: "barra",
+        name: "Barra",
         icon: <AiOutlineBarChart />,
       },
       {
-        name: "pizza",
+        linkName: "pizza",
+        name: "Pizza",
         icon: <FiPieChart />,
       },
       {
-        name: "financeiro",
+        linkName: "financeiro",
+        name: "Financeiro",
         icon: <RiStockLine />,
       },
       {
-        name: "mapa de cores",
+        linkName: "mapa-de-cores",
+        name: "Mapa de cores",
         icon: <BsBarChart />,
       },
       {
-        name: "pirâmide",
+        linkName: "piramide",
+        name: "Pirâmide",
         icon: <GiLouvrePyramid />,
       },
       {
-        name: "empilhamento",
+        linkName: "empilhamento",
+        name: "Empilhamento",
         icon: <AiOutlineBarChart />,
       },
     ],
@@ -654,7 +669,8 @@ export const earningData = [
     title: "Customers",
     iconColor: "#03C9D7",
     iconBg: "#E5FAFB",
-    pcColor: "red-600",
+    pcColor: "red-700",
+    id: 1,
   },
   {
     icon: <BsBoxSeam />,
@@ -663,7 +679,8 @@ export const earningData = [
     title: "Products",
     iconColor: "rgb(255, 244, 229)",
     iconBg: "rgb(254, 201, 15)",
-    pcColor: "green-600",
+    pcColor: "primary_green",
+    id: 2,
   },
   {
     icon: <FiBarChart />,
@@ -672,8 +689,8 @@ export const earningData = [
     title: "Sales",
     iconColor: "rgb(228, 106, 118)",
     iconBg: "rgb(255, 244, 229)",
-
-    pcColor: "green-600",
+    pcColor: "primary_green",
+    id: 3,
   },
   {
     icon: <HiOutlineRefresh />,
@@ -682,7 +699,8 @@ export const earningData = [
     title: "Refunds",
     iconColor: "rgb(0, 194, 146)",
     iconBg: "rgb(235, 250, 242)",
-    pcColor: "red-600",
+    pcColor: "red-700",
+    id: 4,
   },
 ];
 
