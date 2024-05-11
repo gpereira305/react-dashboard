@@ -41,6 +41,9 @@ module.exports = {
       color: {
         primary_green: "#00d900",
       },
+      gridTemplateColumns: {
+        gtc_basic: "repeat(auto-fit, minmax(230px, 1fr))",
+      },
       // backgroundImage: {
       //   "hero-pattern":
       //     "url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')",

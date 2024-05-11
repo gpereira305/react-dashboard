@@ -45,13 +45,13 @@ import product7 from "./product7.jpg";
 // import product8 from "./product8.jpg";
 
 export const gridOrderImage = (props) => (
-  <div>
+  <figure className="w-[80px] h-[80px]">
     <img
-      className="rounded-xl h-20 md:ml-3"
+      className="rounded-xl h-20 w-full object-container"
       src={props.ProductImage}
       alt="order-item"
     />
-  </div>
+  </figure>
 );
 
 export const gridOrderStatus = (props) => (
@@ -914,27 +914,27 @@ export const userProfileData = [
 
 export const ordersGrid = [
   {
-    headerText: "Image",
+    headerText: "Imagem",
     template: gridOrderImage,
     textAlign: "Center",
     width: "120",
   },
   {
-    field: "OrderItems",
     headerText: "Item",
+    field: "OrderItems",
     width: "150",
     editType: "dropdownedit",
     textAlign: "Center",
   },
   {
+    headerText: "Cliente",
     field: "CustomerName",
-    headerText: "Customer Name",
     width: "150",
     textAlign: "Center",
   },
   {
+    headerText: "Total",
     field: "TotalAmount",
-    headerText: "Total Amount",
     format: "C2",
     textAlign: "Center",
     editType: "numericedit",
@@ -942,21 +942,20 @@ export const ordersGrid = [
   },
   {
     headerText: "Status",
-    template: gridOrderStatus,
     field: "OrderItems",
+    template: gridOrderStatus,
     textAlign: "Center",
     width: "120",
   },
   {
+    headerText: "ID do pedido",
     field: "OrderID",
-    headerText: "Order ID",
     width: "120",
     textAlign: "Center",
   },
-
   {
     field: "Location",
-    headerText: "Location",
+    headerText: "Localização",
     width: "150",
     textAlign: "Center",
   },
@@ -2977,10 +2976,17 @@ export const dropdownData = [
 ];
 export const SparklineAreaData = [
   { x: 1, yval: 2 },
-  { x: 2, yval: 6 },
+  { x: 2, yval: 7 },
   { x: 3, yval: 8 },
   { x: 4, yval: 5 },
-  { x: 5, yval: 10 },
+  { x: 5, yval: 15 },
+  { x: 6, yval: 10 },
+  { x: 7, yval: 18 },
+  { x: 8, yval: 22 },
+  { x: 9, yval: 16 },
+  { x: 10, yval: 23 },
+  { x: 11, yval: 14 },
+  { x: 12, yval: 9 },
 ];
 
 export const lineCustomSeries = [
@@ -3054,21 +3060,31 @@ export const ecomPieChartData = [
 export const stackedChartData = [
   [
     { x: "Jan", y: 111.1 },
-    { x: "Feb", y: 127.3 },
+    { x: "Fev", y: 127.3 },
     { x: "Mar", y: 143.4 },
-    { x: "Apr", y: 159.9 },
-    { x: "May", y: 159.9 },
-    { x: "Jun", y: 159.9 },
-    { x: "July", y: 159.9 },
+    { x: "Abr", y: 159.9 },
+    { x: "Mai", y: 161.5 },
+    { x: "Jun", y: 173.2 },
+    { x: "Jul", y: 165.0 },
+    { x: "Ago", y: 123.4 },
+    { x: "Set", y: 209.6 },
+    { x: "Out", y: 234.1 },
+    { x: "Nov", y: 205.8 },
+    { x: "Dez", y: 188.4 },
   ],
   [
     { x: "Jan", y: 111.1 },
-    { x: "Feb", y: 127.3 },
+    { x: "Fev", y: 127.3 },
     { x: "Mar", y: 143.4 },
-    { x: "Apr", y: 159.9 },
-    { x: "May", y: 159.9 },
-    { x: "Jun", y: 159.9 },
-    { x: "July", y: 159.9 },
+    { x: "Abr", y: 159.9 },
+    { x: "Mai", y: 161.5 },
+    { x: "Jun", y: 173.2 },
+    { x: "Jul", y: 165.0 },
+    { x: "Ago", y: 123.4 },
+    { x: "Set", y: 209.6 },
+    { x: "Out", y: 234.1 },
+    { x: "Nov", y: 205.8 },
+    { x: "Dez", y: 188.4 },
   ],
 ];
 
@@ -3077,7 +3093,7 @@ export const stackedCustomSeries = [
     dataSource: stackedChartData[0],
     xName: "x",
     yName: "y",
-    name: "Budget",
+    name: "Orçamento",
     type: "StackingColumn",
     background: "blue",
   },
@@ -3086,7 +3102,7 @@ export const stackedCustomSeries = [
     dataSource: stackedChartData[1],
     xName: "x",
     yName: "y",
-    name: "Expense",
+    name: "Despesas",
     type: "StackingColumn",
     background: "red",
   },
