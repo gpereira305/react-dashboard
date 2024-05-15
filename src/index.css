@@ -10,11 +10,3 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
 }
-
-/* ==========================================================  */
-.sidebar {
-  transform: translateX(0px);
-}
-.sidebar.active {
-  transform: translateX(-300px);
-}
