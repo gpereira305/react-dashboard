@@ -13,7 +13,7 @@ import { Header } from "../components";
 
 export default function Employees() {
   return (
-    <div className="my-6 mx-auto max-w-[1200px]">
+    <div className="my-6 mx-auto max-w-[1200px] bg-white p-10 rounded-3xl">
       <Header category="Página" title="Colaboradores" />
 
       <GridComponent

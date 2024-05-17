@@ -61,8 +61,6 @@ export default function App() {
             </nav>
 
             <div className="h-full bg-gray-200 p-5 pt-[70px]">
-              <ThemeSettings />
-
               <Routes>
                 {/* dashboard */}
                 <Route path="/" element={<Ecommerce />} />

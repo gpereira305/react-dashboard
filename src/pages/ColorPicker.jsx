@@ -9,7 +9,7 @@ const change = (args) => {
 
 export default function ColorPicker() {
   return (
-    <div className="my-6 mx-auto max-w-[1200px]">
+    <div className="my-6 mx-auto max-w-[1200px] bg-white p-10 rounded-3xl">
       <Header category="App" title="Color Picker" />
 
       <div className="text-center">
